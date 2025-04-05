@@ -8,7 +8,7 @@ curl -fsSL https://tailscale.com/install.sh | sh
 
 echo "🚀 Starting Tailscale..."
 sudo tailscaled --tun=userspace-networking &
-sudo tailscale up
+sudo tailscale up --advertise-routes=10.0.0.0/8 --hostname your-unique-hostname
 
 echo "💡 NOTE: Go to the above URL to authenticate this machine with your Tailscale network."
 
